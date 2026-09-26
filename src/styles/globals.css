@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -5,8 +7,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: 'Work Sans', sans-serif;
+  --font-grotesk: 'Space Grotesk', sans-serif;
 }
 
 @theme inline {
@@ -127,8 +129,25 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-work-sans), 'Work Sans', sans-serif;
   }
   html {
     @apply font-sans;
+  }
+  .font-work-sans {
+    font-family: var(--font-work-sans), 'Work Sans', sans-serif;
+  }
+  .font-space-grotesk {
+    font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+  }
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: local('Space Grotesk');
+    font-weight: 100 900;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans');
+    font-weight: 100 900;
   }
 }
