@@ -7,8 +7,8 @@ export default function HeroSection() {
     <section className="flex flex-col justify-center py-24">
       <div className="flex max-w-3xl flex-col items-start">
         <div className="mb-4 flex items-center gap-2">
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#fac52c]"></span>
-          <span className="text-sm leading-4 font-medium tracking-widest text-[#c3c6d6] uppercase">
+          <span className="inline-block h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-[#fac52c]"></span>
+          <span className="text-xs md:text-sm leading-4 font-medium tracking-widest text-[#c3c6d6] uppercase">
             Karawang to Global
           </span>
         </div>

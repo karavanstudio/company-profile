@@ -3,10 +3,20 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "Achievements", href: "/achievements" },
+    { name: "Projects", href: "/projects" },
+    { name: "Articles", href: "/articles" },
+    { name: "Our Team", href: "/our-team" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-50 bg-[#11131a]/75 backdrop-blur-md transition-all duration-300">
@@ -31,37 +41,24 @@ export function Header() {
               : "hidden lg:flex"
           } items-center gap-6`}
         >
-          <Link
-            aria-current="page"
-            className="text-md transition-colors duration-200 tracking-wide text-[#e1e2ec] font-semibold"
-            href="/"
-          >
-            Home
-          </Link>
-          <Link
-            className="text-md text-[#c3c6d6] hover:text-[#e1e2ec] transition-colors duration-200 tracking-wide font-medium"
-            href="/achievements"
-          >
-            Achievements
-          </Link>
-          <Link
-            className="text-md text-[#c3c6d6] hover:text-[#e1e2ec] transition-colors duration-200 tracking-wide font-medium"
-            href="/projects"
-          >
-            Projects
-          </Link>
-          <Link
-            className="text-md text-[#c3c6d6] hover:text-[#e1e2ec] transition-colors duration-200 tracking-wide font-medium"
-            href="/articles"
-          >
-            Articles
-          </Link>
-          <Link
-            className="text-md text-[#c3c6d6] hover:text-[#e1e2ec] transition-colors duration-200 tracking-wide font-medium"
-            href="/our-team"
-          >
-            Our Team
-          </Link>
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`text-base transition-colors duration-200 tracking-wide ${
+                  isActive
+                    ? "text-[#e1e2ec] font-semibold"
+                    : "text-[#a7a7aa] hover:text-[#e1e2ec] font-medium"
+                }`}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-4">

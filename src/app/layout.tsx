@@ -6,8 +6,11 @@ import { Work_Sans, Space_Grotesk } from "next/font/google";
 import { TRPCReactProvider } from "@/trpc/react";
 
 export const metadata: Metadata = {
-  title: "Karavan Studio",
-  description: "Karavan Studio - Interactive Experiences",
+  title: {
+    default: "Karavan Studio",
+    template: "%s - Karavan Studio",
+  },
+  description: "Local development studio from Karawang",
   icons: [{ rel: "icon", url: "/Logogram_Karavan.png" }],
 };
 
