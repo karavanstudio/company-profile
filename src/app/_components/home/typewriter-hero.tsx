@@ -69,20 +69,20 @@ export function TypewriterHero() {
   }, []);
 
   return (
-    <h1 className="font-display-xl text-5xl md:text-7xl text-on-surface tracking-tight font-bold mb-space-lg leading-[1.08] min-h-30">
+    <h1 className="font-display-xl text-5xl md:text-7xl text-on-surface tracking-tight font-bold mb-space-lg leading-[1.08] min-h-30 font-grotesk!">
       {!isLine2 ? (
-        <>
+        <div className="font-grotesk!">
           {displayText}
           <span className="animate-pulse text-gray-300">|</span>
-        </>
+        </div>
       ) : (
-        <>
+        <div className="font-grotesk">
           Welcome to <br />
           <span className="text-primary-fixed text-[#b2c5ff]">
             {displayText}
             <span className="animate-pulse text-gray-300">|</span>
           </span>
-        </>
+        </div>
       )}
     </h1>
   );
