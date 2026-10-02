@@ -19,7 +19,7 @@ export function Footer() {
           </div>
           <div>
             <a
-              className="inline-flex items-center justify-center rounded-full bg-[#ff544f] px-10 py-4 text-[0.875rem] font-medium text-[#e1e2ec] shadow-[0_0_24px_rgba(237,59,59,0.3)] transition-all duration-300 hover:shadow-[0_0_32px_rgba(237,59,59,0.45)] hover:brightness-110"
+              className="inline-flex items-center justify-center rounded-full bg-[#ff544f] px-10 py-4 text-XS font-medium text-[#e1e2ec] shadow-[0_0_24px_rgba(237,59,59,0.3)] transition-all duration-300 hover:shadow-[0_0_32px_rgba(237,59,59,0.45)] hover:brightness-110"
               href="https://www.instagram.com/karavanstudios/"
               target="_blank"
               rel="noreferrer"
