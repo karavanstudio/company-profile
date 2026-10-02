@@ -3,6 +3,8 @@ name: Vercel Production Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
 
 on:
   push:
