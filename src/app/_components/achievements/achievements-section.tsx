@@ -217,6 +217,54 @@ export default function AchievementsSection() {
           </div>
         </div>
       </article>
+
+      {/* achievement 5 - perioda */}
+      <article className="group flex flex-col justify-between rounded-xl bg-[#191b23] p-8 transition-all duration-300 hover:bg-[#1d1f27] md:p-10">
+        <div className="flex flex-col gap-6">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-semibold tracking-widest text-[#fac52c] uppercase md:text-[13px]">
+              05 — Software Engineering
+            </span>
+            <span className="text-xs text-[#8d909f] md:text-[12.5px]">
+              Karawang / 2026
+            </span>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h2 className="font-grotesk text-2xl font-semibold tracking-tight text-[#e1e2ec] md:text-3xl">
+              Pekan Riset Inovasi Daerah
+            </h2>
+            <p className="text-base leading-[1.7] text-[#c3c6d6]">
+              Awarded top honors by regional government bodies for building
+              Karaventure, an innovative platform that combines a website travel directory with a 3D gamification platform on Roblox and artificial intelligence (AI).
+            </p>
+          </div>
+          <div className="relative mt-2 h-56 w-full overflow-hidden rounded-lg bg-[#0c0e15]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="h-full w-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+              alt="Pekan Riset Inovasi Daerah Achievement"
+              src="/Achievements/perioda-news.jpeg"
+            />
+          </div>
+        </div>
+        <div className="mt-6 flex items-center justify-between bg-transparent pt-8">
+          <div className="flex items-center gap-2">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#fac52c]"></span>
+            <span className="text-xs text-[#c3c6d6] md:text-[12.5px]">
+              Domain: Civic Informatics
+            </span>
+          </div>
+          <Link
+            className="inline-flex items-center gap-1 text-sm font-medium text-[#e1e2ec] transition-colors group-hover:text-[#b2c5ff]"
+            href="https://karaventure.up.railway.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Project</span>
+            <ArrowUpRight className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </div>
+      </article>
     </div>
   );
 }
